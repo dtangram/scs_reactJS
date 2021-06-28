@@ -1,0 +1,318 @@
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background: #CCC;
+	color: $colorWhite;
+  font-family: $fontFamilyOpenSans;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+	position: relative;
+}
+
+
+
+/* TYPOGRAPHY ================================== */
+h1, h2{
+  font-weight: $fontWeightBold;
+	line-height: 70px;
+}
+
+h1{
+  color: $colorWhite;
+  font-weight: bold;
+	text-transform: capitalize;
+}
+
+h2{
+	font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.currentLink a{
+  color: $colorYellow;
+  font-weight: $fontWeightBold;
+  text-decoration: underline;
+}
+
+a{
+  color: $colorWhite;
+  -webkit-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -o-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+
+  &:hover{
+    color: $colorYellow;
+    text-decoration: underline;
+  }
+}
+
+p{
+	color: $colorWhite;
+  font-size: 2rem;
+}
+
+.graphic{
+  background: $colorYellow;
+  @extend %center-element;
+  height: 10px;
+  margin-bottom: 50px;
+  width: 70px;
+}
+
+.logo_graphic{
+  // background: url(../img/logo_graphic.png) no-repeat 0 0 / cover;
+  cursor: pointer;
+  @extend %center-element;
+  height: 70px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -36px;
+  width: 70px;
+}
+
+.row{
+  flex-wrap: nowrap;
+
+  @include mq(mediumLargeMd){
+    flex-wrap: wrap;
+  }
+}
+
+button{
+  background: $colorYellow;
+  bottom: 30px;
+  @extend %center-element;
+  color: $colorWhite;
+  cursor: pointer;
+  min-height: 40px;
+  padding: 10px 0;
+  width: 54%;
+}
+
+form{
+  background: $colorBlue;
+  border-radius: 15px;
+  @extend %center-element;
+  display: inline-block;
+  // height: 520px;
+  left: 0;
+  padding: 30px 1%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 120px;
+  width: 350px;
+
+  p{
+    font-size: 1em;
+    margin-bottom: 7px;
+  }
+}
+
+input{
+  border-radius: 8px;
+  height: 35px;
+  margin-bottom: 25px;
+  padding: 10px 1%;
+  width: 100%;
+}
+
+
+
+/* BASE STRUCTURE =============================== */
+
+
+
+/* HEADER ================================== */
+header{
+  height: 124px;
+  margin-bottom: 40px;
+  padding: 20px 9%;
+  position: fixed;
+	width: 100%;
+  z-index: 999;
+
+  @include mq(small){
+    width: 100%;
+  }
+
+  @include mq(medium){
+    background-position: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /*NAVIGATION*/
+  .main-nav{
+    height: auto !important;
+  }
+
+  nav{
+
+
+    section.top-bar-section{
+
+      padding-bottom: 5% !important;
+      ul{
+        li{
+          :hover:not(.has-form){
+            > a{
+              color: $colorWhite !important;
+              transition: color .3s ease 0s !important;
+            }
+          }
+
+          &:hover{
+            background-color: $colorWhite !important;
+          }
+
+          &.currentLink:after{
+            background: $colorWhite !important;
+            content: '' !important;
+            display: block !important;
+            margin: auto !important;
+            height: 1px !important;
+            width: 80% !important;
+          }
+        }
+
+        li.currentLink{
+          a{
+            color: $colorWhite !important;
+            display: inline-block !important;
+            position: relative !important;
+            height: 1px !important;
+
+            &:hover{
+              color: $colorWhite !important;
+            }
+
+            &:after{
+              display: block !important;
+              background: #FFF !important;
+            }
+          }
+        }
+
+        li.slideUnder a, li.slideUnderDrop a{
+          display: inline-block !important;
+          position: relative !important;
+          height: 1px !important;
+        }
+
+        li.currentLink a:after, li.slideUnder:after, li.slideUnderDrop:after{
+          content: '' !important;
+          display: block !important;
+          margin: auto !important;
+          height: 1px !important;
+          width: 0px !important;
+          background: $colorWhite !important;
+          -webkit-transition: width .5s ease, background-color .5s ease !important;
+          -moz-transition: width .5s ease, background-color .5s ease !important;
+          -o-transition: width .5s ease, background-color .5s ease !important;
+          transition: width .5s ease, background-color .5s ease !important;
+          // background: transparent !important;
+        }
+
+        li.slideUnder:after{
+            display: block !important;
+            background: $colorWhite !important;
+        }
+
+        li.slideUnder:hover:after, li.slideUnderDrop:hover:after{
+          background: $colorWhite !important;
+          width: 80% !important;
+        }
+
+        li.underLine:after{
+          background: $colorWhite !important;
+          content: '' !important;
+          display: block !important;
+          margin: auto !important;
+          height: 1px !important;
+          width: 80% !important;
+        }
+      }
+    }
+  }
+}
+
+#bck{
+  min-width: 2050px;
+  min-height: 950px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+
+  #bckRotate{
+    margin: 0;
+
+    li{
+      height: 950px;
+      width: 2050px;
+    }
+
+    li:nth-child(1){
+      background: url(/prekRevamp/img/2019/stock1.jpg) no-repeat 0 0 / cover;
+    }
+
+    li:nth-child(2){
+      background: url(/prekRevamp/img/2019/stock2.jpg) no-repeat 0 0 / cover;
+    }
+
+    li:nth-child(3){
+      background: url(/prekRevamp/img/2019/stock3.jpg) no-repeat 0 0 / cover;
+    }
+
+    li:nth-child(4){
+      background: url(/prekRevamp/img/2019/stock4.jpg) no-repeat 0 0 / cover;
+    }
+
+    li img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// #bck{
+//   position: fixed;
+//   z-index: -1;
+//   top: 15%;
+//   min-width: 2050px;
+//   min-height: 1150px;
+//   width: 100%;
+//   height: 100%;
+//   opacity: .7;
+//
+//   #bckRotate{
+//     margin: 0;
+//
+//     li{
+//       position: absolute;
+//       z-index: 1;
+//       width: 100%;
+//       height: 100%;
+//
+//       img{
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//   }
+// }

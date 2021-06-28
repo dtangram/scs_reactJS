@@ -1,0 +1,8 @@
+/* #top.main-nav section#hp-nav.top-bar-section ul.left li a[href="/prek"]{
+  color: #F7DA47;
+}
+
+#top.main-nav section#hp-nav.top-bar-section ul.left li a[href="/prek"]::after{
+  background-color: #E90101 !important;
+  width: 80% !important;
+} */

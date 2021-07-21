@@ -171,7 +171,7 @@
             </span>
           </div>
 
-          <iframe src="http://www.scsk12.org/espanolNew/reactjs/build/index.html#/"></iframe>
+          <iframe src="http://www.scsk12.org/espanolNew/reactjs/build/"></iframe>
         </section>
       </article>
 

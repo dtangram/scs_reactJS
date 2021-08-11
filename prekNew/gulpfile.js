@@ -14,37 +14,45 @@ var gulp = require("gulp"),
 // });
 
 //Uglify Scripts Task
-gulp.task("scriptsOne", function() {
-	return gulp.src("js/index.js")
-	.pipe(plumber())
-	.pipe(concat("miniScriptsOne.js"))
-	.pipe(uglify())
-	.pipe(gulp.dest("js"));
-});
+gulp.task("scriptsOne", gulp.series(
+	function() {
+		return gulp.src("reactjs/public/js/index.js")
+		.pipe(plumber())
+		.pipe(concat("miniScriptsOne.js"))
+		.pipe(uglify())
+		.pipe(gulp.dest("reactjs/public/js"));
+	}
+));
 
 //Uglify Scripts Task
-gulp.task("scriptsTwo", function() {
-	return gulp.src("js/playCntrls.js")
-	.pipe(plumber())
-	.pipe(concat("miniScriptsPlayCntrls.js"))
-	.pipe(uglify())
-	.pipe(gulp.dest("js"));
-});
+gulp.task("scriptsTwo", gulp.series(
+	function() {
+		return gulp.src("reactjs/public/js/playCntrls.js")
+		.pipe(plumber())
+		.pipe(concat("miniScriptsPlayCntrls.js"))
+		.pipe(uglify())
+		.pipe(gulp.dest("reactjs/public/js"));
+	}
+));
 
 //Minify Styles Task
-gulp.task("minify-css", function() {
-	return gulp.src("css/app.css")
-	.pipe(plumber())
-	.pipe(concat("miniCSS.css"))
-	.pipe(minifyCSS())
-	.pipe(gulp.dest("css"))
-});
+gulp.task("minify-css", gulp.series(
+	function() {
+		return gulp.src("reactjs/public/css/prekStyles.css")
+		.pipe(plumber())
+		.pipe(concat("miniCSS.css"))
+		.pipe(minifyCSS())
+		.pipe(gulp.dest("reactjs/public/css"))
+	}
+));
 
 //Watch Tasks
-gulp.task("watch", function() {
-	gulp.watch("js/index.js", ["scripts"]);
-	gulp.watch("js/playCntrls.js", ["scriptsTwo"]);
-	gulp.watch("css/app.css", ["minify-css"]);
-});
+gulp.task("watch", gulp.series(
+	function() {
+		gulp.watch("reactjs/public/js/index.js", gulp.series(["scriptsOne"]));
+		gulp.watch("reactjs/public/js/playCntrls.js", gulp.series(["scriptsTwo"]));
+		gulp.watch("reactjs/public/css/prekStyles.css", gulp.series(["minify-css"]));
+	}
+));
 
-gulp.task("default", ["watch", "scriptsOne", "scriptsTwo", "minify-css"]);
+gulp.task("default", gulp.series("watch", "scriptsOne", "scriptsTwo", "minify-css"));

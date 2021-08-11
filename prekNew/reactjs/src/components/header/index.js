@@ -164,6 +164,16 @@ class Header extends React.Component {
                     <ul className="headstartLinkDrop">
                       <li>
                         <RRNavLink
+                          to="/headstart"
+                          className="slideUnderDrop"
+                          title="Shelby County Schools Head Start"
+                        >
+                          Head Start
+                        </RRNavLink>
+                      </li>
+
+                      <li>
+                        <RRNavLink
                           to="/readiness"
                           className="slideUnderDrop"
                           title="SCS Pre-K School Readiness"

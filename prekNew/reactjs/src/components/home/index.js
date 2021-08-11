@@ -10,6 +10,7 @@ import ScrollBTN from '../scrollBTN';
 // import '../../css/main.css';
 // import styles from './styles.module.css';
 // import logo from '../../img/logo.png';
+import popupImage from '../../img/2021/PRE-K-BANNER-ENG.jpg';
 import downArr from '../../img/2019/downArr.png';
 import prekImage1 from '../../img/2019/prekImage1.jpg';
 import prekImage2 from '../../img/2019/prekImage2.jpg';
@@ -40,7 +41,7 @@ class Home extends React.Component {
     };
 
     document.getElementById('downArr').addEventListener('click', () => {
-      downArrScrollTo(document.getElementById('prekContainer'));
+      downArrScrollTo(document.getElementById('screenings'));
       // return false;
     });
   }
@@ -59,35 +60,51 @@ class Home extends React.Component {
 
             <button type="button" className="btnHide">Apply for Pre-K</button>
             <section className="prekPopupH3 popupAnimation">
-              <p>
-                2021-22 PRE-K APPLICATIONS OPEN MONDAY, MARCH 8!
-                <br />
-                <span className="italics">
-                  Applications are still open for the current school year (2020-21).
-                </span>
+              <p className="slideUnder">
+                <a href="http://www.scsk12.org/newsroom/#/article/1621" target="_blank">
+                  ATTN. PORTER-LEATH FAMILIES:
+                  <br />
+                  CLICK HERE TO LEARN OUR PLANS TO ENSURE YOU HAVE ACCESS
+                  {' '}
+                  TO HIGH-QUALITY PRE-K EDUCATION WITH SCS.
+                </a>
               </p>
 
-              {
-                // <figure>
-                   // <img src="img/2021/2021-PREK-WEB.jpg"
-                   // alt="Elementary school girl smiling at camera" />
-                  // </figure>
-              }
+              <p>
+                2021-22 PRE-K APPLICATIONS ARE NOW OPEN!
+                <br />
+                <span className="italics">Review eligibility info & apply!</span>
+              </p>
+
+              <figure><img src={popupImage} alt="Boy student smiling at camera" /></figure>
 
               <p>
-                ¡APLICACIONES PARA PRE-KINDER PARA EL AÑO ESCOLAR
-                2021-22 ABREN EL LUNES, 8 DE MARZO!
+                ¡LAS SOLICITUDES DE PRE-K PARA EL AÑO 2021-22 YA ESTÁN ABIERTAS!
                 <br />
-                <span className="italics">
-                  Las solicitudes todavía están abiertas
-                  para el año escolar actual (2020-21).
-                </span>
+                <span className="italics">Revise la información de elegibilidad y aplique.</span>
               </p>
             </section>
           </section>
         </article>
 
         <article id="bckWrap" className="large-12">
+          <section className="playerControls">
+            <button id="pause" type="button" className="controlsBTN"><i className="fas fa-pause controls" alt="Pause button" /></button>
+            <button id="play" type="button" className="controlsBTN"><i className="fas fa-play controls" alt="Play button" /></button>
+          </section>
+
+          <article className="alertLinkWrap">
+            <p className="slideUnder alertLink">
+              <a href="http://www.scsk12.org/newsroom/#/article/1621" target="_blank">
+                ATTN. PORTER-LEATH FAMILIES:
+                <br />
+                CLICK HERE TO LEARN OUR PLANS TO ENSURE YOU HAVE ACCESS
+                {' '}
+                TO HIGH-QUALITY PRE-K EDUCATION WITH SCS.
+              </a>
+            </p>
+          </article>
+
           <h1 className="larg-12 medium-12 small-12">
             Pre-K &
             <br />
@@ -98,17 +115,16 @@ class Home extends React.Component {
           {
             // PLAY AND PAUSE IMAGE CAROUSEL
           }
-          <section className="playerControls">
-            <button id="pause" type="button" className="controlsBTN"><i className="fas fa-pause controls" alt="Pause button" /></button>
-            <button id="play" type="button" className="controlsBTN"><i className="fas fa-play controls" alt="Play button" /></button>
-          </section>
 
           <section className="arrowCTRL">
             <button id="leftArr" type="button" className="arrows"><i className="fas fa-chevron-left controlsArr" alt="Left arrow to navigate to previous photo." /></button>
             <button id="rightArr" type="button" className="arrows"><i className="fas fa-chevron-right controlsArr" alt="Right arrow to navigate to next photo." /></button>
           </section>
 
-          <figure id="downArr" className="large-12 medium-12 small-12"><img src={downArr} alt="Red arrow pointing down" /></figure>
+          <figure id="downArr" className="large-12 medium-12 small-12">
+            <figcaption>Apply for Pre-K</figcaption>
+            <img src={downArr} alt="Red arrow pointing down" />
+          </figure>
 
           <section id="bck">
             <ul id="bckRotate">

@@ -1,5 +1,5 @@
 {
-  "name": "HeroLog",
+  "name": "scs-studentaffairs",
   "version": "1.0.0",
   "description": "[DESCRIPTION OF YOUR PROJECT]",
   "engines": {
@@ -27,6 +27,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.14.0",
     "eslint-plugin-react-app": "^5.0.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-terser": "^2.0.1",
+    "gulp-watch": "^5.0.1",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6"
   },

@@ -1,54 +1,42 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
-import { Link as a } from 'react-router-dom';
 import ScrollBTN from '../scrollBTN';
+import ImgSlider from '../imgSlider';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    localStorage.clear();
+
+    const home: string = 'home';
+    localStorage.setItem('home', home);
+
+    const getHome = localStorage.getItem('home');
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+
+    if (getHome) {
+      homeLink.classList.add('currentLink');
+    }
+
+    if (!getHome) {
+      homeLink.classList.remove('currentLink');
+    }
   }
 
   render() {
     return (
       <>
         <ScrollBTN />
-
-        <article id="bckWrap" className="large-12">
-          <h1 className="larg-12 medium-12 small-12">
-            Student Affairs
-            <figure className="graphic" alt="Small red, rectangle graphic." />
-          </h1>
-
-          {
-            // PLAY AND PAUSE IMAGE CAROUSEL
-          }
-          <section className="playerControls">
-            <button id="pause" type="button" className="controlsBTN"><i className="fas fa-pause controls" alt="Pause button" /></button>
-            <button id="play" type="button" className="controlsBTN"><i className="fas fa-play controls" alt="Play button" /></button>
-          </section>
-
-          <section className="arrowCTRL">
-            <button id="leftArr" type="button" className="arrows"><i className="fas fa-chevron-left controlsArr" alt="Left arrow to navigate to previous photo." /></button>
-            <button id="rightArr" type="button" className="arrows"><i className="fas fa-chevron-right controlsArr" alt="Right arrow to navigate to next photo." /></button>
-          </section>
-
-          <section id="bck">
-            <ul id="bckRotate">
-              <li className="current" alt="Group of students standing with superintendent, and holding a certificate" />
-              <li alt="Student affairs director reading to students" />
-              <li alt="Students metting with superintendent and student affairs" />
-              <li alt="Large group of students standing in front of building" />
-            </ul>
-          </section>
-        </article>
+        <ImgSlider />
 
         <article id="studentAffairsContainer">
           <section id="resizer" className="row">

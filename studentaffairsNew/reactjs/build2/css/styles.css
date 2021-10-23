@@ -1,0 +1,1098 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  font-weight: bold;
+}
+
+p{
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  text-align: left;
+}
+
+/* ul{
+  font-size: 1.2em;
+  margin-left: auto;
+}
+
+ul li{
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0 auto 20px;
+} */
+
+figure{
+  margin: 0 auto;
+}
+
+.italics{
+  font-style: italic;
+  font-weight: normal;
+}
+
+#studentAffairsContainer{
+  background: #FFF !important;
+}
+
+
+
+/* ROTATING HERO IMAGES */
+#bckWrap{
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+#bck{
+  min-width: 2050px;
+  /* max-height: 500px; */
+  /* max-width: 3000px; */
+  height: 500px;
+  opacity: .5;
+  /* position: fixed; */
+  top: 0;
+  /* width: 3000px; */
+  z-index: -1;
+}
+
+#bckRotate{
+  height: 100%;
+  margin: 0;
+}
+
+#bckRotate li{
+  display: none;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+}
+
+#bckRotate li:nth-child(1){
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsImg1.jpg') no-repeat 0 0 / cover;
+  display: block;
+}
+
+#bckRotate li:nth-child(2){
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsImg2.jpg') no-repeat 0 0 / cover;
+}
+
+#bckRotate li:nth-child(3){
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsImg3.jpg') no-repeat 0 0 / cover;
+}
+
+#bckRotate li:nth-child(4){
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsImg4.jpg') no-repeat 0 0 / cover;
+}
+
+#bckRotate li.previous{
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+#bckRotate li.current{
+  display: block;
+  opacity: 1;
+  z-index: 2;
+}
+
+#bckRotate li img{
+  width: 100%;
+  height: 100%;
+}
+/**/
+
+#bckWrap > h1, #leadershipWrap > h1, #readinessWrap > h1, #servicesresearchWrap > h1, #recruitmentWrap > h1, #engagementWrap > h1, #staffWrap > h1{
+  color: #fffcfc;
+  font-family: 'Lora', sans-serif;
+  font-size: 7em;
+  font-weight: bold;
+  left: 50%;
+  line-height: 180px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.playerControls{
+  display: inline-block;
+  margin-left: 2%;
+  position: relative;
+  width: 17%;
+  z-index: 8;
+}
+
+.playerControls .controlsBTN{
+  background: #E90101;
+  border-radius: 8px;
+  padding: 8% 0;
+  position: absolute;
+  width: inherit;
+}
+
+.playerControls .controlsBTN .controls{
+  color: #FFF;
+  font-size: 1.5rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#play{
+  display: none;
+}
+
+.arrowCTRL{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 30%;
+  transform: translate(0, 50%);
+  width: 100%;
+  z-index: 9;
+}
+
+.arrows{
+  background: transparent;
+}
+
+.arrows .controlsArr{
+  color: #FFF;
+  font-size: 3rem;
+}
+
+#resizer.row{
+  padding-bottom: 30px;
+}
+
+h2.studentAffairsH2{
+  color: #232323;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.graphic{
+  background: #E90101;
+  margin: 0 auto 50px;
+  height: 10px;
+  width: 70px;
+}
+
+span{
+  font-weight: bold;
+}
+
+.studentAffairsIntro p, .studentAffairsIntro ul{
+  font-size: 1.6em;
+  /* margin: -.5em 0 2em 0;
+  padding: 0 5%; */
+}
+
+.studentAffairsIntro ul{
+  font-size: 1.2em;
+  /* list-style: none; */
+}
+
+.studentAffairsIntro ul li{
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0 auto 20px;
+  /* text-align: center; */
+}
+
+.studentAffairsIntro > section figure{
+  margin-bottom: 15px;
+}
+
+.studentAffairsIntro > section figure img{
+  width: 90%;
+}
+
+.newSection > section.studentAffairsIntro ul, .newSection2 > section.studentAffairsIntro ul{
+  font-size: 1.3em;
+  list-style: disc;
+}
+
+.newSection > section.studentAffairsIntro p, .newSection2 > section.studentAffairsIntro p{
+  padding-bottom: 3%;
+}
+
+.newSection > section.studentAffairsIntro ul, .newSection2 > section.studentAffairsIntro ul{
+  padding-left: 5%;
+}
+
+.newSection .studentAffairsIntro ul li,  .newSection2 .studentAffairsIntro ul li{
+  text-align: left;
+}
+
+.newSection2{
+  background: #CCC;
+}
+
+.recruitment section.newSection2 .grants p, .recruitment section.newSection2 .grants ul{
+  padding-left: 17%;
+  padding-right: 17%;
+}
+
+#studentAffairsSpaceLimit{
+  background: #234590;
+  border-bottom: 5px solid #E90101;
+  color: #FFF;
+  font-weight: bold;
+  padding: 8px 10px 50px;
+}
+
+#studentAffairsSpaceLimit > section .studentAffairsWrapper .studentAffairsIntro h2.studentAffairsH2{
+  color: #FFF;
+}
+
+#studentAffairsSpaceLimit p, #studentAffairsSpaceLimit p a{
+  font-size: 1.7rem;
+}
+
+#studentAffairsSpaceLimit p{
+  padding: 0;
+  /* text-align: center; */
+}
+
+#studentAffairsSpaceLimit p span{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#studentAffairsSpaceLimit .row .studentAffairsWrapper section.studentAffairsIntro p, article.studentAffairsIntro p{
+  margin: 0;
+}
+
+.newSection > section.studentAffairsIntro p a, .newSection2 > section.studentAffairsIntro p a{
+  color: #234590;
+  font-weight: bold;
+  padding: 0;
+}
+
+#studentAffairsSpaceLimit p a, #readinessSpaceLimit .slideUnder, #servicesresearchSpaceLimit .slideUnder, .studentAffairsWrapStart .studentAffairsPara .slideUnder{
+  color: white;
+  font-weight: bold;
+  padding: 0;
+}
+
+#studentAffairsSpaceLimit .slideUnder, .studentAffairsWrapStart article section p .slideUnder, #readinessSpaceLimit .slideUnder, #servicesresearchSpaceLimit .slideUnder, .newSection > section.studentAffairsIntro p a,
+.newSection2 > section.studentAffairsIntro p a, .studentAffairsWrapStart .studentAffairsPara a{
+  display: inline-block !important;
+  position: relative !important;
+}
+
+#studentAffairsSpaceLimit .slideUnder::after, .studentAffairsWrapStart article section p .slideUnder::after, #readinessSpaceLimit .slideUnder::after,
+#servicesresearchSpaceLimit .slideUnder::after, .newSection > section.studentAffairsIntro p a::after, .studentAffairsWrapStart .studentAffairsPara a:after{
+  content: '' !important;
+  display: block !important;
+  margin: auto !important;
+  height: 1px !important;
+  width: 0px !important;
+  background-color: #E90101 !important;
+  -webkit-transition: width .5s ease, background-color .5s ease !important;
+  -moz-transition: width .5s ease, background-color .5s ease !important;
+  -o-transition: width .5s ease, background-color .5s ease !important;
+  transition: width .5s ease, background-color .5s ease !important;
+}
+
+#studentAffairsSpaceLimit .slideUnder:hover::after, .studentAffairsWrapStart article section p .slideUnder:hover::after, #readinessSpaceLimit .slideUnder:hover::after,
+#servicesresearchSpaceLimit .slideUnder:hover::after, .newSection > section.studentAffairsIntro p a:hover::after, .studentAffairsWrapStart .studentAffairsPara a:hover::after{
+  background: #E90101 !important;
+  width: 80% !important;
+}
+
+.studentAffairsWrapStart article section p.phoneNumber{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.studentAffairsRequire {
+  height: 600px;
+  padding: 0;
+}
+
+.studentAffairsCopyContainer{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/largeHomePhoto3.jpg') no-repeat 0 0 / cover;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 15% 5%;
+  position: relative;
+}
+
+.studentAffairsCopyContainer .studentAffairsH2{
+  color: #333 !important;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 20px auto;
+}
+
+.studentAffairsWrapStart{
+  margin: auto;
+  /* padding: 0 15% 15%; */
+}
+
+.studentAffairsWrapStart article{
+  /* background: #FFF; */
+  margin: 0 auto 10%;
+  /* padding-left: 0; */
+  /* padding-right: 0; */
+}
+
+.studentAffairsWrapStart article figure{
+  background: #000;
+  /* height: 190px; */
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.studentAffairsWrapStart article section{
+  background: #FFF;
+  /* height: 400px; */
+  min-height: 150px;
+}
+
+.studentAffairsWrapStart article section ul{
+  list-style: none;
+  margin: 0;
+}
+
+.studentAffairsWrapStart article section ul li{
+  font-weight: bold;
+  text-align: center;
+}
+
+.studentAffairsWrapStart article h3.studentAffairsH3{
+  background: #234590;
+  border-bottom: 3px solid #E90101;
+  color: #FFF;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.studentAffairsWrapStart > p.studentAffairsPara{
+  background: #234590;
+  border: 3px solid #E90101;
+  color: #FFF;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.4rem;
+  /* font-weight: bold; */
+  line-height: 50px;
+  margin-bottom: 70px;
+  padding: 20px 1%;
+  margin-top: 0;
+  text-align: center;
+}
+
+.studentAffairsWrapStart > p.studentAffairsPara a{
+  color: #FFF;
+}
+
+.studentAffairsWrapStart article h3.studentAffairsH3{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+.studentAffairsWrapStart article section{
+  padding: 30px;
+}
+
+.studentAffairsWrapStart article section p, .studentAffairsWrapStart article section ul li{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  /* font-size: .9rem; */
+}
+
+.staff #resizer.row{
+  max-width: 100%;
+  padding-bottom: 0;
+}
+
+.staffSection{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.staffSection article{
+  margin: 0 auto;
+}
+
+.staffSection article figure{
+  width: 60%;
+}
+
+.staffSection article figure img{
+  width: 100%;
+}
+
+.staffSection:nth-child(2n - 1){
+  background: #234590;
+  border-bottom: 3px solid #E90101;
+  color: #FFF;
+}
+
+.staffSection:nth-child(2n - 1) ul li, .staffSection:nth-child(2n - 1) p a, section.staffSection:nth-child(2n - 1) ul li span{
+  color: #FFF;
+}
+
+.staffSection ul li, .staffSection p{
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.staffSection ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.staffSection ul li:nth-child(1) span{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.staffSection ul li:nth-child(2) span{
+  color: #767676;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+section.staffSection:nth-child(2n - 1) ul li:nth-child(2) span{
+  font-weight: normal;
+}
+
+.staffSection p a{
+  font-weight: bold;
+}
+
+.studentAffairsImg{
+  /* background: url('http://www.scsk12.org/studentaffairsNew/img/2020/footerImg.jpg') no-repeat fixed 0 0 / cover; */
+  padding: 7% 0;
+  /* position: relative; */
+}
+
+.studentAffairsFooterImg{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/footerImg.jpg') no-repeat fixed 0 0 / cover;
+  padding: 300px 0;
+  position: relative;
+}
+
+#leadershipWrap.studentAffairsImg{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead.jpg') no-repeat fixed 0 0 / cover;
+}
+
+#recruitmentWrap.studentAffairsImg{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead2.jpg') no-repeat fixed 0 0 / cover;
+}
+
+#engagementWrap.studentAffairsImg{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead3.jpg') no-repeat fixed 0 0 / cover;
+}
+
+#staffWrap.studentAffairsImg{
+  background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead4.jpg') no-repeat fixed 0 0 / cover;
+}
+
+.overlayHeaderBCK{
+  background: rgba(0, 0, 0, .6);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+section.studentAffairsFooterImg > article{
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(0, 130px);
+  z-index: 4;
+}
+
+section.studentAffairsFooterImg > article > h2.studentAffairsH2{
+  color: white;
+}
+
+.img901{
+  left: 0;
+  margin: 0 auto;
+}
+
+.img901 img{
+  height: 100%;
+  width: 100%;
+}
+
+#template-back-button{
+  display: none;
+}
+
+
+
+/* HEAD START */
+#leadershipWrap, #readinessWrap, #servicesresearchWrap, #recruitmentWrap, #engagementWrap, #staffWrap{
+  height: 450px;
+  position: relative;
+}
+
+.readiness #resizer .studentAffairsWrapper > .studentAffairsIntro ul,
+.servicesresearch #resizer .studentAffairsWrapper > .studentAffairsIntro p, .servicesresearch #resizer .studentAffairsWrapper > .studentAffairsIntro ul, .newSection .studentAffairsIntro p, .newSection .studentAffairsIntro ul,
+.newSection2 .studentAffairsIntro p, .newSection2 .studentAffairsIntro ul{
+  padding: 0;
+}
+
+#resizer .studentAffairsWrapper > .studentAffairsIntro p{
+  padding: 0;
+}
+
+.servicesresearch #resizer .studentAffairsWrapper > .studentAffairsIntro p{
+  text-align: center;
+}
+
+#leadershipSpaceLimit .studentAffairsH2{
+  color: #FFF;
+  margin-top: 0;
+}
+
+.spacelimit{
+  background: #234590;
+  border-bottom: 5px solid #E90101;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  /* padding: 40px 5%; */
+  padding: 40px 15%;
+}
+
+#leadershipSpaceLimit.spacelimit{
+  padding: 20px 15%;
+}
+
+#readinessSpaceLimit.spacelimit{
+  display: block;
+  height: 225px;
+}
+
+.spacelimit p, .spacelimit ul, .spacelimit ol{
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 0 1%;
+}
+
+.spacelimit p, .spacelimit ul li, .spacelimit ol li{
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.spacelimit ol span{
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+/* #leadershipSpaceLimit.spacelimit p, #leadershipSpaceLimit.spacelimit ol{
+  padding: 0;
+} */
+
+#leadershipSpaceLimit.spacelimit ol span, #leadershipSpaceLimit.spacelimit ol li{
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  /* font-size: 1.5rem; */
+  /* display: inline-block;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 20px;
+  padding: 0; */
+}
+
+.spacelimit > :last-child{
+  margin: 0;
+}
+
+#readinessSpaceLimit ul, #servicesresearchSpaceLimit ul{
+  font-size: 1.1em;
+}
+
+.grants p, .studentAffairsContain p{
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.grants{
+  padding: 40px 20%;
+}
+
+.studentAffairsContain{
+  padding: 0 20% 40px;
+}
+
+.studentAffairsContain, .studentAffairsContain > article:nth-child(4){
+  display: inline-block;
+}
+
+.studentAffairsContain > article:nth-child(2){
+  margin-bottom: 30px;
+}
+
+.studentAffairsContain > article:nth-child(4) p, .studentAffairsContain > article:nth-child(4) section ul{
+  padding: 0 10%;
+}
+
+.studentAffairsContain > article:nth-child(4) section ul{
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.studentAffairsContain > article:nth-child(4) section ul li{
+  text-align: left;
+}
+
+.staffSection article p a{
+  text-transform: lowercase;
+}
+
+.leadership .studentAffairsCopyContainer, .readiness .studentAffairsCopyContainer, .servicesresearch .studentAffairsCopyContainer{
+  padding-bottom: 1%;
+}
+
+.hp-social > div, .footer-graphic > div{
+  text-align: center;
+}
+
+.hp-social > div:nth-child(2) ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-graphic > div p{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.footer-graphic a{
+  color: #FFF;
+}
+
+.footer-graphic a:hover{
+  color: #E90101;
+}
+
+div.bottom p {
+    font-size: .9em;
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 1421px){
+  /* .studentAffairsWrapStart article figure{
+    height: 161px;
+  } */
+
+  #readinessSpaceLimit.spacelimit{
+    height: 255px;
+  }
+}
+
+@media only screen and (max-width: 1440px){
+  #bckWrap > h1{
+    top: 25%;
+  }
+
+  #bckWrap #downArr {
+    bottom: 230px;
+  }
+
+  #bck{
+    left: -200px;
+    top: -100px;
+  }
+}
+
+@media only screen and (max-width: 1420px) and (min-width: 1025px){
+  .studentAffairsWrapStart article figure{
+    height: auto;
+  }
+
+  #readinessSpaceLimit.spacelimit{
+    height: 265px;
+  }
+}
+
+@media only screen and (max-width: 1410px){
+  .playerControls{
+    width: 25%;
+  }
+
+  .playerControls .controlsBTN{
+    /* font-size: 1.1rem; */
+    padding: 10% 0;
+  }
+
+  .studentAffairsWrapStart article section ul li{
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 1300px){
+  #readinessSpaceLimit.spacelimit{
+    height: 285px;
+  }
+}
+
+@media only screen and (max-width: 1130px){
+  #readinessSpaceLimit.spacelimit{
+    padding: 40px 5%;
+  }
+
+  #readinessSpaceLimit.spacelimit p{
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .studentAffairsWrapStart article figure{
+    height: auto;
+    /* height: 240px; */
+  }
+
+  .studentAffairsWrapStart article section ul li{
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 915px){
+  section.studentAffairsWrapStart{
+    padding: 0 15%;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  #bckWrap{
+    height: 400px;
+  }
+
+  #bckWrap > h1{
+    font-size: 5em;
+    line-height: 103px;
+    top: 45%;
+  }
+
+  #bckWrap #downArr {
+    bottom: 0;
+  }
+
+  #bck{
+    left: -700px;
+    top: -100px;
+  }
+
+  .studentAffairsCopyContainer{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/largeHomePhoto3.jpg') no-repeat 44% 0 / cover;
+  }
+
+  #leadershipWrap.studentAffairsImg{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead.jpg') no-repeat 50% 0 / 900px;
+  }
+
+  #recruitmentWrap.studentAffairsImg{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead2.jpg') no-repeat 50% 0 / 900px;
+  }
+
+  #engagementWrap.studentAffairsImg{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead3.jpg') no-repeat 50% 0 / 900px;
+  }
+
+  #staffWrap.studentAffairsImg{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/studentAffairsBCKHead4.jpg') no-repeat 0 0 / cover;
+  }
+
+  .studentAffairsFooterImg{
+    background: url('http://www.scsk12.org/studentaffairsNew/img/2020/footerImg.jpg') no-repeat 50% 0 / cover;
+  }
+
+  section.studentAffairsImg > article{
+    padding: 0 2%;
+  }
+
+  .spacelimit, .grants, .Contain{
+    padding: 40px 5%;
+  }
+
+  .spacelimit p, .grants p, .Contain p, .recruitment section.newSection2 .grants p{
+    padding: 0;
+  }
+
+  .recruitment section.newSection2 .grants ul{
+    margin-top: 15px;
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 914px){
+  section.studentAffairsWrapStart{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  /* POPUP */
+  @-webkit-keyframes popupstudentAffairsH3 {
+    0% {
+      margin-top: -100px; }
+    100% {
+      margin-top: 150px; } }
+  @-moz-keyframes popupstudentAffairsH3 {
+    0% {
+      opacity: 0;
+      margin-top: -100px; }
+    100% {
+      opacity: 1;
+      margin-top: 150px; } }
+  @-o-keyframes popupstudentAffairsH3 {
+    0% {
+      opacity: 0;
+      margin-top: -100px; }
+    100% {
+      opacity: 1;
+      margin-top: 150px; } }
+  @keyframes popupstudentAffairsH3 {
+    0% {
+      opacity: 0;
+      margin-top: -100px; }
+    100% {
+      opacity: 1;
+      margin-top: 150px; } }
+
+
+  @-webkit-keyframes popupClose {
+    0% {
+      margin-top: -200px; }
+    100% {
+      margin-top: 95px; } }
+  @-moz-keyframes popupClose {
+    0% {
+      margin-top: -200px; }
+    100% {
+      margin-top: 95px; } }
+  @-o-keyframes popupClose {
+    0% {
+      margin-top: -200px; }
+    100% {
+      margin-top: 95px; } }
+  @keyframes popupClose {
+    0% {
+      margin-top: -200px; }
+    100% {
+      margin-top: 95px; } }
+
+  .PopupstudentAffairsH3{
+    margin: 150px auto 0;
+  }
+
+  .popupCloseBTN{
+    margin-top: 95px;
+  }
+}
+
+@media only screen and (max-width: 878px){
+  #readinessSpaceLimit.spacelimit{
+    height: 330px;
+  }
+}
+
+@media only screen and (max-width: 750px){
+  #bckWrap > h1, #leadershipWrap > h1, #readinessWrap > h1, #servicesresearchWrap > h1, #recruitmentWrap > h1, #engagementWrap > h1, #staffWrap > h1{
+    font-size: 4em;
+    line-height: 100px;
+  }
+
+  .staffSection{
+    display: inline-block;
+  }
+
+  .staffSection ul, .staffSection p:nth-child(2){
+    margin-bottom: 30px;
+  }
+
+  .studentAffairsFooterImg h2.studentAffairsH2{
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 878px){
+  .playerControls .controlsBTN .controls{
+    font-size: 1.1rem;
+  }
+
+  #readinessSpaceLimit.spacelimit{
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 672px){
+  .PopupstudentAffairsH3, .studentAffairsPara{
+    padding: 20px 3%;
+  }
+
+  .playerControls{
+    width: 26%;
+  }
+
+  .playerControls .controlsBTN{
+    padding: 13% 0;
+  }
+
+  #readinessSpaceLimit.spacelimit{
+    height: 390px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .studentAffairsIntro > section{
+    float: none;
+    text-align: center;
+  }
+
+  .studentAffairsIntro p, .studentAffairsIntro > section p, .studentAffairsIntro > section ul li{
+    text-align: center;
+  }
+
+  .studentAffairsIntro > section ul{
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 595px){
+  h2.studentAffairsH2{
+    font-size: 1.7rem;
+    line-height: normal;
+  }
+
+  .graphic{
+    margin: 25px auto 50px;
+  }
+
+  .studentAffairsWrapStart {
+    padding: 0 0 15%;
+  }
+
+  #readinessSpaceLimit.spacelimit{
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #leftArr{
+    padding-left: 1%;
+  }
+
+  #rightArr{
+    padding-right: 1%;
+  }
+
+  .arrows .controlsArr{
+    font-size: 2rem;
+  }
+
+  .studentAffairsIntro{
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .playerControls{
+    width: 30%;
+  }
+
+  .playerControls .controlsBTN{
+    padding: 20px 0;
+  }
+
+  .playerControls .controlsBTN .controls{
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    margin-top: -10em;
+    font-size: 1.8em;
+  }
+
+  .Wbox-containers {
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    padding-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  #readinessSpaceLimit.spacelimit{
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  #readinessSpaceLimit.spacelimit{
+    height: 520px;
+  }
+}
+
+@media only screen and (max-width: 376px){
+  #readinessSpaceLimit.spacelimit{
+    height: 580px;
+  }
+}
+
+@media only screen and (max-width: 340px){
+  #readinessSpaceLimit.spacelimit{
+    height: 610px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  #readinessSpaceLimit.spacelimit{
+    height: 640px;
+  }
+}
+
+@media only screen and (max-width: 300px){
+  #readinessSpaceLimit.spacelimit{
+    height: 760px;
+  }
+}
+
+.bottom p{
+  margin-bottom: 0;
+}

@@ -44,7 +44,7 @@
       }
     </style>
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/miniCSS.css" />
   </head>
 
   <body>
@@ -86,7 +86,7 @@
     <iframe src="http://www.scsk12.org/studentaffairsNew/reactjs/build/index.html#/"></iframe>
 
     <!--start footer-->
-    <?php include("../template-includes/studentAffairs-footer.php");?>
+    
     <!--end footer-->
 
     <!--start jquerys-->

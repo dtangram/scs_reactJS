@@ -1,6 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Route, Switch,
+  Redirect,
+} from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 // import store from './store';
@@ -20,8 +24,44 @@ import Footer from './components/footer';
 
 class App extends Component {
   render() {
+    const getHome = localStorage.getItem('home');
+    const getHeadstart = localStorage.getItem('headstart');
+    const getReadiness = localStorage.getItem('readiness');
+    const getServicesresearch = localStorage.getItem('servicesresearch');
+    const getEnvironment = localStorage.getItem('environment');
+    const getFamily = localStorage.getItem('family');
+    const getStaff = localStorage.getItem('staff');
+
     return (
       <Router>
+        {getHome && (
+          <Redirect to="/" />
+        )}
+
+        {getHeadstart && (
+          <Redirect to="/headstart" />
+        )}
+
+        {getReadiness && (
+          <Redirect to="/readiness" />
+        )}
+
+        {getServicesresearch && (
+          <Redirect to="/servicesresearch" />
+        )}
+
+        {getEnvironment && (
+          <Redirect to="/environment" />
+        )}
+
+        {getFamily && (
+          <Redirect to="/family" />
+        )}
+
+        {getStaff && (
+          <Redirect to="/staff" />
+        )}
+
         {
           // USE THESE TWO ROUTES FOR BUILD
         }

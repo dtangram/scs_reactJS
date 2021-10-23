@@ -1,12 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
 // import { HashLink as Link } from 'react-router-hash-link';
 // import { Container, Row, Col } from 'reactstrap';
-import { Link as RRLink } from 'react-router-dom';
 import ScrollBTN from '../scrollBTN';
-import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
+// import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
 import WEare901 from '../../img/2019/WEare901.png';
 // import Link from '../../link';
 // import '../../css/main.css';
@@ -22,12 +19,28 @@ import WEare901 from '../../img/2019/WEare901.png';
 class Readiness extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    localStorage.clear();
+
+    const readiness: string = 'readiness';
+    localStorage.setItem('readiness', readiness);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+    const headerLink = getLinks.querySelector('li:nth-child(2)');
+
+    homeLink.classList.remove('currentLink');
+
+    if (readiness) {
+      headerLink.classList.add('currentLink');
+    }
   }
 
   render() {
@@ -95,6 +108,7 @@ class Readiness extends React.Component {
                   href="https://eclkc.ohs.acf.hhs.gov/school-readiness"
                   className="slideUnder"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   school readiness
                 </a>

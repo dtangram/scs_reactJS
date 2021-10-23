@@ -16,13 +16,13 @@ $(document).ready(function(){
         ctlanguagedropdownHidden = $(".ct-language__dropdown").css({"display": "none", "overflow": "hidden"}),
         ctlanguage = $(".ct-language");
 
-  $("ul.ct-topbar__list button li.ct-language ul.list-unstyled li").hover(() => {
-    $(this).find("a").css({ 'font-size': '1em', 'transition': 'font-size 5s ease-in-out' });
-      },
-      () => {
-        $(this).find("a").css({ 'font-size': '.9em', 'transition': 'font-size 5s ease-in-out' });
-      }
-    );
+  // $("ul.ct-topbar__list button li.ct-language ul.list-unstyled li").hover(() => {
+  //   $(this).find("a").css({ 'font-size': '1em', 'transition': 'font-size 5s ease-in-out' });
+  //     },
+  //     () => {
+  //       $(this).find("a").css({ 'font-size': '.9em', 'transition': 'font-size 5s ease-in-out' });
+  //     }
+  //   );
 
   // $("#ct-topbar").insertBefore("#hp-header");
   // $(".hp-scs-logo-text a").attr("tabindex", "0");
@@ -229,12 +229,16 @@ $(document).ready(function(){
 
     $(popH3Link).click(function(){
       window.open('http://www.scsk12.org/newsroom/#/article/1621');
-      $("html, body").stop().animate({scrollTop: $(".popup").offset().top}, 1);
+      $("html, body").stop().animate({ scrollTop: $(".popup").offset().top }, 1);
       return false;
     });
 
+    const scrollPage = () => {
+      $("html, body").stop().animate({ scrollTop: $("#screenings").offset().top-100 }, 1000);
+    };
+
     $(popup).click(function(){
-      $("html, body").stop().animate({scrollTop: $("#screenings").offset().top}, 1000);
+      scrollPage();
       $(alertLinkWrap).css("display", "block").stop().animate({"opacity": "1"}, 1000);
       return false;
     });
@@ -267,7 +271,7 @@ $(document).ready(function(){
   });
 
   $("#bckWrap #downArr").click(() => {
-    $("html, body").stop().animate({ scrollTop: $("#screenings").offset().top }, 1000);
+    scrollPage();
     return false;
   });
 

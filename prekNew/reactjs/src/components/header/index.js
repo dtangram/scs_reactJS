@@ -1,11 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
 // import { HashLink as Link } from 'react-router-hash-link';
 // import { Container, Row, Col } from 'reactstrap';
 // import { Link as RRNavLink, a } from 'react-router-dom';
-import { NavLink as RRNavLink, a } from 'react-router-dom';
+import { NavLink as RRNavLink, Link as a } from 'react-router-dom';
 // import Link from '../../link';
 // import '../../css/main.css';
 // import styles from './styles.module.css';
@@ -20,6 +18,7 @@ import { NavLink as RRNavLink, a } from 'react-router-dom';
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
@@ -98,7 +97,7 @@ class Header extends React.Component {
           }
           <section className="row logoH1">
             <article className="small-12 hp-scs-logo-text">
-              <a href="http://www.scsk12.org/" target="_blank" className="SCS-logo-focus">
+              <a href="http://www.scsk12.org/" target="_blank" rel="noreferrer" className="SCS-logo-focus">
                 <figure>
                   <img src="http://www.scsk12.org/img/home-page/scs-log-small-90.png" className="SCS-logo-round" alt="Shelby County Schools Logo" />
                 </figure>
@@ -196,6 +195,7 @@ class Header extends React.Component {
                         <a
                           href="http://www.scsk12.org/prek/files/2019/Early Childhood Annual Report 2018.pdf"
                           target="_blank"
+                          rel="noreferrer"
                           className="slideUnderDrop"
                           title="SCS Pre-K Annual Report"
                         >
@@ -212,6 +212,7 @@ class Header extends React.Component {
                     <a
                       href="http://www.scsk12.org/schools/?findschool=&level=P&category=?PID=918#/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Pre-K Schools
                     </a>

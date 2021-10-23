@@ -1,20 +1,26 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
 import { Link as a } from 'react-router-dom';
-import axios from 'axios';
 import ScrollBTN from '../scrollBTN';
 
 class Staff extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    const staff: string = 'staff';
+    localStorage.setItem('staff', staff);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+
+    homeLink.classList.remove('currentLink');
   }
 
   render() {

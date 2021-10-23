@@ -25,89 +25,57 @@ class Home extends React.Component {
   }
 
   loadData = () => {
-    const {
-      espanolContent,
-      rotateBCK,
-      rotateBCK2,
-      rotateBCK3,
-      matLinks,
-      servLinks,
-      recLinks,
-    } = this.state;
-
+    const { espanolContent } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/phpMySQLAPI.php')
       .then((result) => {
         this.setState({ espanolContent: result.data });
       });
 
+    const { rotateBCK } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/rotateBckAPI.php')
       .then((result) => {
         this.setState({ rotateBCK: result.data });
       });
 
+    const { rotateBCK2 } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/rotateBckAPI2.php')
       .then((result) => {
         this.setState({ rotateBCK2: result.data });
       });
 
+    const { rotateBCK3 } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/rotateBckAPI3.php')
       .then((result) => {
         this.setState({ rotateBCK3: result.data });
       });
 
+    const { matLinks } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/matAPI.php')
       .then((result) => {
         this.setState({ matLinks: result.data });
       });
 
+    const { servLinks } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/servAPI.php')
       .then((result) => {
         this.setState({ servLinks: result.data });
       });
 
+    const { recLinks } = this.state;
     axios.get('http://www.scsk12.org/espanolNew/recAPI.php')
       .then((result) => {
         this.setState({ recLinks: result.data });
       });
-
-    // const axioURL = (url, stateVar) => {
-    //   const axObj = {
-    //     url,
-    //     stateVarNew: stateVar,
-    //   };
-    //
-    //   // axObj.url = url;
-    //   // axObj.stateVarNew = stateVarNew;
-    //
-    //   axObj.axObjFunc = () => {
-    //     axios.get(axObj.url)
-    //       .then((res) => {
-    //         this.setState({ [axObj.stateVar]: res.data });
-    //       });
-    //   };
-    //
-    //   return axObj;
-    // };
-    //
-    // const espanolContentAPI = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', espanolContent).axObjFunc();
-    // const rotateBCKAPI = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', rotateBCK).axObjFunc();
-    // const rotateBCK2API = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', rotateBCK2).axObjFunc();
-    // const rotateBCK3API = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', rotateBCK3).axObjFunc();
-    // const matLinksAPI = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', matLinks).axObjFunc();
-    // const servLinksAPI = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', servLinks).axObjFunc();
-    // const recLinksAPI = axioURL('http://www.scsk12.org/espanolNew/phpMySQLAPI.php', recLinks).axObjFunc();
   };
 
   render() {
-    const {
-      espanolContent,
-      rotateBCK,
-      rotateBCK2,
-      rotateBCK3,
-      matLinks,
-      servLinks,
-      recLinks,
-    } = this.state;
+    const { espanolContent } = this.state;
+    const { rotateBCK } = this.state;
+    const { rotateBCK2 } = this.state;
+    const { rotateBCK3 } = this.state;
+    const { matLinks } = this.state;
+    const { servLinks } = this.state;
+    const { recLinks } = this.state;
 
     const split = espanolContent.split(' ');
     const obj = split.join(' ')

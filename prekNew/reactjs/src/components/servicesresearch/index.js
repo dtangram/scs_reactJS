@@ -1,12 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
 // import { HashLink as Link } from 'react-router-hash-link';
 // import { Container, Row, Col } from 'reactstrap';
-import { Link as RRLink } from 'react-router-dom';
 import ScrollBTN from '../scrollBTN';
-import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
+// import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
 import WEare901 from '../../img/2019/WEare901.png';
 // import Link from '../../link';
 // import '../../css/main.css';
@@ -22,12 +19,32 @@ import WEare901 from '../../img/2019/WEare901.png';
 class ServicesResearch extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    localStorage.clear();
+
+    const servicesresearch: string = 'servicesresearch';
+    localStorage.setItem('servicesresearch', servicesresearch);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+    const headerLink = getLinks.querySelector('li:nth-child(2)');
+
+    homeLink.classList.remove('currentLink');
+
+    if (servicesresearch) {
+      headerLink.classList.add('currentLink');
+    }
+
+    // if (homeLink.classList.contains('currentLink')) {
+    //   homeLink.classList.remove('currentLink');
+    // }
   }
 
   render() {
@@ -128,6 +145,7 @@ class ServicesResearch extends React.Component {
                 <a
                   href="https://eclkc.ohs.acf.hhs.gov/about-us/article/head-start-program-facts"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Head Start fact sheets
                 </a>

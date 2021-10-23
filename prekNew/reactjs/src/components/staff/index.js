@@ -1,13 +1,8 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
-// import { HashLink as Link } from 'react-router-hash-link';
-// import { Container, Row, Col } from 'reactstrap';
 import { Link as a } from 'react-router-dom';
 import axios from 'axios';
 import ScrollBTN from '../scrollBTN';
-import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
 import WEare901 from '../../img/2019/WEare901.png';
 // import Link from '../../link';
 // import '../../css/main.css';
@@ -34,11 +29,25 @@ class Staff extends React.Component {
       top: 0,
     });
 
+    localStorage.clear();
+
+    const staff: string = 'staff';
+    localStorage.setItem('staff', staff);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const headerLink = getLinks.querySelector('li:nth-child(2)');
+
+    headerLink.classList.remove('currentLink');
+
+    // if (homeLink.classList.contains('currentLink')) {
+    //   homeLink.classList.remove('currentLink');
+    // }
+
     this.loadData();
   }
 
   loadData = () => {
-    const { staffList } = this.state;
+    // const { staffList } = this.state;
     axios.get('http://www.scsk12.org/prekNew/staffAPI.php')
       .then((result) => {
         this.setState({ staffList: result.data });

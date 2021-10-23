@@ -1,19 +1,27 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
-import { Link as RRLink } from 'react-router-dom';
 import ScrollBTN from '../scrollBTN';
 
 class Leadership extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    localStorage.clear();
+
+    const leadership: string = 'leadership';
+    localStorage.setItem('leadership', leadership);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+
+    homeLink.classList.remove('currentLink');
   }
 
   render() {

@@ -1,10 +1,8 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
-import PropTypes from 'prop-types';
-import RRPropTypes from 'react-router-prop-types';
 // import { HashLink as Link } from 'react-router-hash-link';
 // import { Container, Row, Col } from 'reactstrap';
-import { Link as RRLink } from 'react-router-dom';
+// import { Link as RRLink } from 'react-router-dom';
 import ScrollBTN from '../scrollBTN';
 import prekHeaderImage3 from '../../img/2019/prekHeaderImage3.jpg';
 import WEare901 from '../../img/2019/WEare901.png';
@@ -22,12 +20,32 @@ import WEare901 from '../../img/2019/WEare901.png';
 class Headstart extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
     window.scrollTo({
       top: 0,
     });
+
+    localStorage.clear();
+
+    const headstart: string = 'headstart';
+    localStorage.setItem('headstart', headstart);
+
+    const getLinks = document.querySelector('.parentLinks');
+    const homeLink = getLinks.querySelector('li:nth-child(1)');
+    const headerLink = getLinks.querySelector('li:nth-child(2)');
+
+    homeLink.classList.remove('currentLink');
+
+    if (headstart) {
+      headerLink.classList.add('currentLink');
+    }
+
+    // if (homeLink.classList.contains('currentLink')) {
+    //   homeLink.classList.remove('currentLink');
+    // }
   }
 
   render() {

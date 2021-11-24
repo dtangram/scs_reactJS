@@ -17,14 +17,14 @@ class Popup extends React.Component {
     const pageLoading = document.querySelector('.popupContainer > p:nth-child(1)');
     const close = document.querySelector('.popupContainer > button');
     const alertLinkWrap = document.querySelector('.alertLinkWrap');
-    const bckRotate = document.querySelector('#bckRotate');
 
     if (navigator.userAgent.indexOf('Firefox') !== -1) {
       document.querySelector('.popupCloseBTN').style.cssText = 'left: 0; transform: translate(0, 0);';
     }
 
     if (navigator.userAgent.indexOf('Edge') !== -1 || navigator.userAgent.indexOf('IE') !== -1) {
-      document.querySelector('#downArr img').style.cssText = 'height: 25px; width: 40px';
+      popupContainer.classList.remove('popupAnimation');
+      popupContainer.classList.add('popupAnimationEdgeIE');
     }
 
     const popClose = document.querySelectorAll('.popup, .popup > button');
@@ -137,10 +137,6 @@ class Popup extends React.Component {
           alertLinkWrap.style.cssText = 'opacity: 1; display: block;';
         }
       });
-    }
-
-    if (navigator.appVersion.indexOf('Mac') !== -1) {
-      bckRotate.style.margin = '0';
     }
 
     popH3Link.addEventListener('click', () => {

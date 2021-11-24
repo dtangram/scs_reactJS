@@ -15,7 +15,6 @@ import Photography from './components/photography';
 import WebSocial from './components/websocial';
 import Templates from './components/templates';
 import TitleVI from './components/titleVI';
-import ButtonTest from './components/buttonTest';
 import Footer from './components/footer';
 
 class App extends React.Component {
@@ -36,7 +35,6 @@ class App extends React.Component {
         <Route path="/websocial" exact component={WebSocial} />
         <Route path="/templates" exact component={Templates} />
         <Route path="/titleVI" exact component={TitleVI} />
-        <Route path="/buttonTest" exact component={ButtonTest} />
 
         <Footer />
       </HashRouter>

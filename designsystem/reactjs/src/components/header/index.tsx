@@ -218,21 +218,18 @@ class Header extends React.Component {
 
                       <ul className="brandingLinkDrop">
                         {getTypography ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/typography"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Typography"
                             >
                               Typography
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/typography"
-                              className="slideUnderDrop"
                               title="Typography"
                             >
                               Typography
@@ -241,21 +238,18 @@ class Header extends React.Component {
                         )}
 
                         {getColor ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/color"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Color"
                             >
                               Color
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/color"
-                              className="slideUnderDrop"
                               title="Color"
                             >
                               Color
@@ -264,21 +258,18 @@ class Header extends React.Component {
                         )}
 
                         {getLogo ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/logo"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Logo"
                             >
                               Logo
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/logo"
-                              className="slideUnderDrop"
                               title="Logo"
                             >
                               Logo
@@ -287,21 +278,18 @@ class Header extends React.Component {
                         )}
 
                         {getAccessibility ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/accessibility"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Accessibility"
                             >
                               Accessibility
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/accessibility"
-                              className="slideUnderDrop"
                               title="Accessibility"
                             >
                               Accessibility
@@ -310,21 +298,18 @@ class Header extends React.Component {
                         )}
 
                         {getEmail ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/email"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Email"
                             >
                               Email
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/email"
-                              className="slideUnderDrop"
                               title="Email"
                             >
                               Email
@@ -346,50 +331,45 @@ class Header extends React.Component {
                       </RRNavLink>
 
                       <ul className="brandingLinkDrop">
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/typography"
-                            className="slideUnderDrop"
                             title="Typography"
                           >
                             Typography
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/color"
-                            className="slideUnderDrop"
                             title="Color"
                           >
                             Color
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/logo"
-                            className="slideUnderDrop"
                             title="Logo"
                           >
                             Logo
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/accessibility"
-                            className="slideUnderDrop"
                             title="Accessibility"
                           >
                             Accessibility
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/email"
-                            className="slideUnderDrop"
                             title="Email"
                           >
                             Email
@@ -418,21 +398,18 @@ class Header extends React.Component {
 
                       <ul className="languageLinkDrop">
                         {getTerms ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/terms"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Terms"
                             >
                               Terms
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/terms"
-                              className="slideUnderDrop"
                               title="Terms"
                             >
                               Terms
@@ -441,21 +418,18 @@ class Header extends React.Component {
                         )}
 
                         {getAcronyms ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/acronyms"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Acronyms"
                             >
                               Acronyms
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/acronyms"
-                              className="slideUnderDrop"
                               title="Acronyms"
                             >
                               Acronyms
@@ -477,20 +451,18 @@ class Header extends React.Component {
                       </RRNavLink>
 
                       <ul className="languageLinkDrop">
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/terms"
-                            className="slideUnderDrop"
                             title="Terms"
                           >
                             Terms
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/acronyms"
-                            className="slideUnderDrop"
                             title="Acronyms"
                           >
                             Acronyms
@@ -514,21 +486,18 @@ class Header extends React.Component {
 
                       <ul className="layoutLinkDrop">
                         {getPhotography ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/photography"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Photography"
                             >
                               Photography
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/photography"
-                              className="slideUnderDrop"
                               title="Photography"
                             >
                               Photography
@@ -537,20 +506,19 @@ class Header extends React.Component {
                         )}
 
                         {getWebsocial ? (
-                          <li title="web and social media">
+                          <li className="currentLink slideUnderDrop" title="web and social media">
                             <RRNavLink
                               to="/websocial"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
+                              title="Web and Social Media"
                             >
                               Web/Social
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li title="web and social media">
+                          <li className="slideUnderDrop" title="web and social media">
                             <RRNavLink
                               to="/websocial"
-                              className="slideUnderDrop"
+                              title="Web and Social Media"
                             >
                               Web/Social
                             </RRNavLink>
@@ -558,21 +526,18 @@ class Header extends React.Component {
                         )}
 
                         {getTemplates ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/templates"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Templates"
                             >
                               Templates
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/templates"
-                              className="slideUnderDrop"
                               title="Templates"
                             >
                               Templates
@@ -581,21 +546,18 @@ class Header extends React.Component {
                         )}
 
                         {getTitleVI ? (
-                          <li>
+                          <li className="currentLink slideUnderDrop">
                             <RRNavLink
                               to="/titleVI"
-                              className="currentLink slideUnderDrop"
-                              activeStyle={{ color: '#F7DA47' }}
                               title="Title VI"
                             >
                               Title VI
                             </RRNavLink>
                           </li>
                         ) : (
-                          <li>
+                          <li className="slideUnderDrop">
                             <RRNavLink
                               to="/titleVI"
-                              className="slideUnderDrop"
                               title="Title VI"
                             >
                               Title VI
@@ -617,40 +579,36 @@ class Header extends React.Component {
                       </RRNavLink>
 
                       <ul className="layoutLinkDrop">
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/photography"
-                            className="slideUnderDrop"
                             title="Photography"
                           >
                             Photography
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/websocial"
-                            className="slideUnderDrop"
-                            title="web and social media"
+                            title="Web and Social Media"
                           >
                             Web/Social
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/templates"
-                            className="slideUnderDrop"
                             title="Templates"
                           >
                             Templates
                           </RRNavLink>
                         </li>
 
-                        <li>
+                        <li className="slideUnderDrop">
                           <RRNavLink
                             to="/titleVI"
-                            className="slideUnderDrop"
                             title="Title VI"
                           >
                             Title VI

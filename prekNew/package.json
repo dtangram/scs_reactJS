@@ -2,9 +2,6 @@
   "name": "scs-prek",
   "version": "1.0.0",
   "description": "[DESCRIPTION OF YOUR PROJECT]",
-  "engines": {
-    "node": "11.2.0"
-  },
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

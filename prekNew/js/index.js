@@ -95,10 +95,15 @@ $(document).ready(function(){
       $('.parentLinks li .headstartLinkDrop li').removeClass('currentLink');
     });
 
-    $('#top.main-nav section#hp-nav.top-bar-section > .parentLinks li.headstartLink ul li a').click(function(){
-      $(this).parent().addClass('currentLink').parent().removeClass('currentLink').siblings().removeClass('currentLink');
-      $('#top.main-nav section#hp-nav.top-bar-section > .parentLinks .headstartLink').siblings().removeClass('currentLink');
+    $('.parentLinks > li > ul > li a').click(function(){
+      $(this).parent().addClass('currentLink').parent().parent().addClass('currentLink').siblings().removeClass('currentLink');
+      // $('.parentLinks > li > ul > li a').parent().siblings().removeClass('currentLink');
     });
+
+    // $('#top.main-nav section#hp-nav.top-bar-section > .parentLinks li.headstartLink ul li a').click(function(){
+    //   $(this).parent().addClass('currentLink').parent().removeClass('currentLink').siblings().removeClass('currentLink');
+    //   $('#top.main-nav section#hp-nav.top-bar-section > .parentLinks .headstartLink').siblings().removeClass('currentLink');
+    // });
   });
 
   const mn = $("#top");

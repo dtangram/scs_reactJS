@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <!--<![endif]-->
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWWM2GKH68"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YWWM2GKH68');
+    </script>
+    <!--END GOOGLE ANALYTICS -->
+
+    <meta property="og:title" content="SCS Spanish Hub" />
+    <meta name="image" property="og:image" content="http://www.scsk12.org/espanolNew/img/espanolImg2.jpg" />
+    <meta name="author" content="Douglas T. Angram" />
+    <meta property="og:description" content="Hispanic students" />
+    <meta property="og:url" content="http://www.scsk12.org/espanolNew/img/" />
+
     <title>SCS Español</title>
     <?php include("../template-includes/db-connection.php");?>
     <?php include("includes/department-id.php");?>
@@ -137,7 +154,7 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
     <!-- GOOGLE ANALYTICS -->
-    <script>
+    <!-- <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -145,7 +162,7 @@
 
       ga('create', 'UA-45216310-1', 'auto');
       ga('send', 'pageview');
-    </script>
+    </script> -->
     <!--END GOOGLE ANALYTICS -->
   </head>
 

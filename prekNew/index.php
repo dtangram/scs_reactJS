@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <!--<![endif]-->
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210550255-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-210550255-1');
+    </script>
+    <!--END GOOGLE ANALYTICS -->
+
+    <meta property="og:title" content="SCS Pre-k/Headstart" />
+    <meta name="image" property="og:image" content="http://www.scsk12.org/prekNew/reactjs/build/static/media/prekImage1.fbe8dda9.jpg" />
+    <meta name="author" content="Douglas T. Angram" />
+    <meta property="og:description" content="Pre-k students" />
+    <meta property="og:url" content="http://www.scsk12.org/prekNew/reactjs/build/static/media/" />
+
     <title>SCS Prek/Head Start</title>
     <?php include("../template-includes/db-connection.php");?>
     <?php include("includes/department-id.php");?>
@@ -81,12 +98,12 @@
     </script>
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="js/jquery.selectBox.js" type="text/javascript"></script>
+    <!-- <script src="js/jquery.selectBox.js" type="text/javascript"></script> -->
     <!---->
     <iframe src="http://www.scsk12.org/prekNew/reactjs/build/index.html#/"></iframe>
 
     <!--start footer-->
-    
+
     <!--end footer-->
 
     <!--start jquerys-->

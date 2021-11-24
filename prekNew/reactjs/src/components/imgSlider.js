@@ -21,6 +21,10 @@ class ImgSlider extends React.Component {
     const bckRotate = document.querySelector('#bckRotate');
     const bckRotateLi = bckRotate.querySelectorAll('li');
 
+    if (navigator.appVersion.indexOf('Mac') !== -1) {
+      bckRotate.style.margin = '0';
+    }
+
     play.style.display = 'none';
     pause.style.display = 'block';
 
@@ -40,7 +44,7 @@ class ImgSlider extends React.Component {
       setTimeout(() => {
         bckRotateLi[nextImg].style.display = 'block';
       }, 500);
-      bckRotateLi[nextImg].style.opacity = 1;
+      bckRotateLi[nextImg].style.cssText = 'opacity: 1; transition: opacity 500ms ease-in-out;';
     };
 
     const slideFunc = () => {

@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <!--<![endif]-->
   <head>
+    <meta property="og:title" content="SCS Design System" />
+    <meta name="image" property="og:image" content="http://www.scsk12.org/designsystem/img/designSysHeroImg.jpg" />
+    <meta name="author" content="Douglas T. Angram" />
+    <meta property="og:description" content="Student in front of computers" />
+    <meta property="og:url" content="http://www.scsk12.org/designsystem/img/" />
+
     <title>SCS Design System</title>
     <?php include("../template-includes/db-connection.php");?>
     <?php include("includes/department-id.php");?>

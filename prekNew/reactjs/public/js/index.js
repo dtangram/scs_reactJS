@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 $(document).ready(function(){
   $(window).scroll(function(event) {
     if ($(window).scrollTop() > 100) {
@@ -134,6 +135,27 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
   //
+
+  // POPUP SCROLLING FOR EDGE AND IE
+  const popup = $('.popup');
+  const close = $('.popup > button');
+
+  const scrollPage = () => {
+    $('html, body').stop().animate({ scrollTop: $('#screenings').offset().top - 100 }, 1000);
+  };
+
+  if (navigator.userAgent.indexOf('Edge') !== -1 || navigator.userAgent.indexOf('IE') !== -1) {
+    $(window).load(() => {
+      $(popup, close).click(() => {
+        scrollPage();
+      });
+    });
+
+    $('#downArr').click(() => {
+      scrollPage();
+      return false;
+    });
+  }
 
   $(window).scroll((event) => {
     if ($(window).scrollTop() > 0) {

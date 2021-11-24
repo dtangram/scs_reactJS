@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <!--<![endif]-->
   <head>
+    <meta property="og:title" content="SCS Student Affairs" />
+    <meta name="image" property="og:image" content="http://www.scsk12.org/ram/img/2020/footerImg.jpg" />
+    <meta name="author" content="Douglas T. Angram" />
+    <meta property="og:description" content="Students standing and waving books" />
+    <meta property="og:url" content="http://www.scsk12.org/ram/img/2020/" />
+
     <title>SCS Student Affairs</title>
     <?php include("../template-includes/db-connection.php");?>
     <?php include("includes/department-id.php");?>
@@ -81,12 +87,11 @@
     </script>
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="js/jquery.selectBox.js" type="text/javascript"></script>
     <!---->
     <iframe src="http://www.scsk12.org/studentaffairsNew/reactjs/build/index.html#/"></iframe>
 
     <!--start footer-->
-    
+
     <!--end footer-->
 
     <!--start jquerys-->

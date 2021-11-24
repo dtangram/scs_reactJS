@@ -9,7 +9,12 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-
+    const nav = document.querySelector('nav.top-bar');
+    if (window.screen.width <= 640) {
+      nav.addEventListener('click', () => {
+        nav.classList.toggle('expanded');
+      });
+    }
   }
 
   render() {
@@ -95,19 +100,17 @@ class Header extends React.Component {
               data-topbar
               className="top-bar"
             >
-              {
-                // <ul className="title-area">
-                //   <li className="name hp-nav-active" />
-                //   <li className="left toggle-topbar menu-icon">
-                //     <RRNavLink to="#">
-                //       Menu
-                //       <span>
-                //         <div className="fi-list" />
-                //       </span>
-                //     </RRNavLink>
-                //   </li>
-                // </ul>
-              }
+              <ul className="title-area">
+                <li className="name hp-nav-active" />
+                <li className="left toggle-topbar menu-icon">
+                  <RRNavLink to="#">
+                    Menu
+                    <span>
+                      <div className="fi-list" />
+                    </span>
+                  </RRNavLink>
+                </li>
+              </ul>
 
               <section
                 id="hp-nav"

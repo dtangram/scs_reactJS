@@ -14,11 +14,15 @@ class DownArr extends React.Component {
     const downArrow = document.querySelector('#downArr');
     const alertLinkWrap = document.querySelector('.alertLinkWrap');
 
+    if (navigator.userAgent.indexOf('Edge') !== -1 || navigator.userAgent.indexOf('IE') !== -1) {
+      document.querySelector('#downArr img').style.cssText = 'height: 25px; width: 40px';
+    }
+
     const downArrScrollTo = (element) => {
       window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: element.offsetTop,
+        top: element.offsetTop - 100,
       });
     };
 

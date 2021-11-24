@@ -164,9 +164,10 @@ header{
     z-index: 999;
 
     @include mq(largeTwo){
-      margin: 0 !important;
-      right: 215px;
-      top: -10px;
+      right: 0;
+      text-align: center;
+      top: -25px;
+      width: 100%;
     }
 
     @include mq(mediumFour){
@@ -182,6 +183,11 @@ header{
   }
 
   .ct-topbar .container{
+    @include mq(largeTwo){
+      display: inline-block;
+      width: 100%;
+    }
+
     #translator button{
       background: transparent;
       padding: 0;
@@ -257,6 +263,10 @@ header{
       align-items: center;
       display: flex;
       text-decoration: none;
+
+      @include mq(largeTwo){
+        justify-content: center;
+      }
     }
 
     figure{
@@ -278,8 +288,12 @@ header{
       text-shadow: none;
       z-index: unset;
 
+      @include mq(largeTwo){
+        padding-left: 0;
+      }
+
       @include mq(mediumFour){
-        padding-left: 3em;
+        // padding-left: 3em;
       }
     }
   }
@@ -481,7 +495,6 @@ header{
 
 
 .bckWrap{
-  background: url('http://www.scsk12.org/designsystem/img/designSysBCK.jpg') fixed no-repeat 0 0 / 2188px;
   height: 500px;
   position: relative;
 
@@ -542,6 +555,154 @@ header{
       line-height: 58px;
       top: 252px;
     }
+  }
+}
+
+.homeMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg2.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg2.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg2.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.typoMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg7.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg7.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg7.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.colorMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg10.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg10.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg10.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.logoMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg6.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg6.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg6.jpg') no-repeat -795px 24px / 2050px;
+  }
+
+  @include mq(smallOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg6.jpg') no-repeat -1413px 24px / 2050px;
+  }
+}
+
+.accMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg4.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg4.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg4.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.emailMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg9.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg9.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg9.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.termMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg3.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg3.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg3.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.acroMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg8.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg8.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg8.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.photoWrap .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.webMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg5.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg5.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg5.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.tempMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysBCK.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysBCK.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysBCK.jpg') no-repeat -795px 24px / 2050px;
+  }
+}
+
+.titleMain .bckWrap{
+  background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg12.jpg') no-repeat 0 24px / 2050px;
+
+  @include mq(largeOne){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg12.jpg') no-repeat -539px 24px / 2050px;
+  }
+
+  @include mq(largeTwo){
+    background: url('http://www.scsk12.org/designsystem/img/designSysHeroImg12.jpg') no-repeat -795px 24px / 2050px;
   }
 }
 
@@ -621,10 +782,16 @@ header{
         padding: 30px;
 
         @include mq(smallFour){
-          font-size: .9rem;
+          // font-size: .9rem;
           padding: 5px 9px;
         }
       }
+    }
+  }
+
+  .panelWrap{
+    @include mq(smallOne){
+      padding: 0;
     }
   }
 }
@@ -635,7 +802,7 @@ header{
   }
 }
 
-.branding, .layout, .typoUse, .colorUse, .optionalUse, .photoUse{
+.lightgrayBCK{
   background-color: $color12;
 }
 
@@ -648,9 +815,13 @@ header{
   background-color: $color9;
 }
 
-.introParagraph, .typeSecOne, .colorSecOne, .logoSecOne, .logoUse, .reimagineUse, .logo901Use, .bestLogoUse, .listContainer{
+.secWrap{
   background-color: $color1;
   padding: 0 20% 5px;
+
+  @include mq(mediumFour){
+    padding: 20px 20px 30px;
+  }
 
   @include mq(smallFour){
     padding: 20px 0 30px;
@@ -732,7 +903,7 @@ header{
   }
 }
 
-.colorUse, .izoneUse, .optionalUse{
+.colorContainer{
   .panelColorWrap{
     h3{
       background: transparent;
@@ -955,8 +1126,7 @@ header{
 }
 
 
-
-.logoUse, .reimagineUse, .logo901Use, .bestLogoUse{
+.logoContainer{
   background-color: $color12;
 
   section{
@@ -1052,7 +1222,7 @@ header{
   }
 }
 
-.termMain > section:nth-child(odd), .acroMain > section:nth-child(odd), .webWrap > section:nth-child(odd){
+.termMain > section:nth-child(odd), .acroMain > section:nth-child(odd), .webMain > section:nth-child(odd), .tempMain > section:nth-child(odd){
   background-color: $color12;
 }
 
@@ -1146,7 +1316,7 @@ header{
   }
 }
 
-.webWrap{
+.webMain, .tempMain{
   p{
     margin-bottom: 20px;
   }
